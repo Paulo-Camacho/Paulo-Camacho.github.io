@@ -1,51 +1,110 @@
 <!DOCTYPE html> <!-- this says that this is an html document -->
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title> THIS IS THE LABEL ON THE TAB </title>
-  </head>
 
-  <body>
-    <header>
-      <h1> TEAM ORANGE OTTERS </h1>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <title> THIS IS THE LABEL ON THE TAB </title>
+  <style>
+    #accent1 {
+      margin: 0 auto;
+      text-align: center;
+      background-color: red;
 
-    <hr>
+    }
 
-    <div>
-      <nav><a href="index.html"> Home </a>
-      <a href="about.html"> About </a>
-      <a href="contact.html"> Contact </a>
-      </nav>
-    </div>
+    #accent2 {
+      background-color: beige;
+      text-align: center;
+      padding: 2%;
+    }
 
-    <div><img src="img/me.jpg" align="middle" width="300" height="300">
-        <p>Paulo</p>
-    </div>
-    <div>
-      <img src="img/Wendy.jpg" align="middle"width="300" height="300">
-        <p>Wendy</p>
-    </div>
-    <div>
-      <img src="img/Yadhira.jpeg" align="middle"width="300" height="300">
-        <p>Yadhira</p>
-    </div>
+    .boxAccent {
+      background-color: #5A4A3A;
+      border: 50% solid #f2e7da;
+      padding: 1% 1%;
+      text-decoration: none;
+      color: red;
+      font-weight: bold;
+      margin: 0 auto;
+      margin-right: 1%;
+      margin-left: 1%;
+      text-align: center;
+    }
+
+    #row {
+
+      display: flex;
+      justify-content: center;
+      /* Content will wrap it the next line if window gets too small */
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+    .photo {
+      width: 100%;
+      height: 300px;
+      border: 5px solid black;
+      /* This will pink in the photo to the block size. */
+      object-fit: cover;
+    }
+
+    .centerPhoto {
+      width: 20%;
+      margin: 0 auto;
+
+    }
+    .centerPrettyText {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 id="accent1"> HEY </h1>
+  </header>
+
+  <!-- navigation -->
+  <div id="accent2">
+    <nav>
+      <a class="boxAccent" href="index.html"> Home </a>
+      <a class="boxAccent" href="about.html"> About </a>
+      <a class="boxAccent" href="contact.html"> Contact </a>
+    </nav>
+  </div>
 
 
-    <p>Hello! Thank you for visiting our website. We are the Orange Otters currently enrolled in CST 336 at CSUMB. Feel free to contact us! </p>
+  <div id="row">
+    <figure class="centerPhoto">
+      <img class="photo" src="img/me.jpg" width="100">
+      <figcaption> Paulo Camacho </figcaption>
+    </figure>
+    <figure class="centerPhoto">
+      <img class="photo" src="img/Wendy.jpg" width="100">
+      <figcaption> Wendy </figcaption>
+    </figure>
+    <figure class="centerPhoto">
+      <img class="photo" src="img/Yadhira.jpeg" width="100">
+      <figcaption> Athian </figcaption>
+    </figure>
+  </div>
 
-    <p><em> "Who controls the past controls the future" </em></p>
-    <p><em>  - George Orwell </em></p>
 
-    <hr>
+  <p class="centerPrettyText">Hello! Thank you for visiting our website. We are the Orange Otters currently enrolled in CST 336 at CSUMB. Feel
+    free to contact us! </p>
+
+  <p class="centerPrettyText"><em> "Who controls the past controls the future" </em></p>
+  <p class="centerPrettyText"><em> - George Orwell </em></p>
+
+  <hr>
 
   <footer>
-    <p>CST336 Internet programming. 2025 C Camacho, Ayala, Camberos, Bernal-Morales</p>
-    <p>Disclaimer: The information in this webpage is fictitious.</p>
-    <p>It is used for academic purposes only.</p>
-    <img src="img/otter.png" align="middle"width="300" height="100">
+      <div class="centerPhoto"><img src="img/otter.png" align="middle" width="300" height="100"></div>
+    <p class="centerPrettyText">CST336 Internet programming. 2025 C Camacho, Ayala, Camberos, Bernal-Morales</p>
+    <p class="centerPrettyText">Disclaimer: The information in this webpage is fictitious.</p>
+    <p class="centerPrettyText">It is used for academic purposes only.</p>
   </footer>
 
-  </body>
+</body>
 
 </html>
