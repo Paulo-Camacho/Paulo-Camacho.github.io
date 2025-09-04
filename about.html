@@ -1,4 +1,4 @@
-<!DOCTYPE html> <!-- this says that this is an html document -->
+ <!DOCTYPE html> <!-- this says that this is an html document -->
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -94,9 +94,37 @@
       color: black;
     }
 
+    .tableAccent {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: white;
+      border-collapse: collapse;
+      border: 2px solid #000;
+    }
+
+    .tableAccent th,
+    .tableAccent td {
+      border: 1px solid #000;
+      padding: 8px 12px;
+      text-align: left;
+    }
+
+    .tableAccent th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+      border-bottom: 2px solid #000;
+    }
+
+    /* This alternates the row coloring */
+    .tableAccent tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
     .verticalSpacing {
       margin: 2rem 0;
     }
+    
   </style>
 </head>
 
@@ -118,7 +146,7 @@
   <div class="verticalSpacing"></div>
 
 
-  <div id="row">
+  <!-- <div id="row">
     <figure class="shrinkPhoto">
       <img class="photo" src="img/me.jpg" width="100">
       <figcaption class="centerPrettyText"> Paulo Camacho </figcaption>
@@ -131,25 +159,45 @@
       <img class="photo" src="img/Yadhira.jpeg" width="100">
       <figcaption class="centerPrettyText"> Yadhira </figcaption>
     </figure>
-  </div>
+  </div> -->
 
 
   <div class="verticalSpacing"></div>
 
 
-  <p class="centerPrettyText">Hello! Thank you for visiting our website. We are the Orange Otters currently enrolled in
-    CST 336 at CSUMB. Feel
-    free to contact us! </p>
+     <table class="tableAccent">
+      <tr>
+        <th>Programming Languages</th>
+        <th>Years of experience</th>
+      </tr>
+      <tr>
+        <td> Java </td>
+        <td> 2 </td>
+      </tr>
+      <tr>
+        <td> C++ </td>
+        <td> 2 </td>
+      </tr>
+      </tr>
+      <tr>
+        <td> Python </td>
+        <td> 3</td>
+      </tr>
+    </table>
+
+<br>
+
+<p style="font-weight: bold;" class="centerPrettyText">Our Common Hobbies</p>
+<ul>
+  <li class="centerPrettyText"> Hiking </li>
+  <li class="centerPrettyText"> Anime</li>
+  <li class="centerPrettyText"> Reading </li>
+</ul>
 
 
   <div class="verticalSpacing"></div>
-
-
-  <p class="centerPrettyText"><em> "Who controls the past controls the future" </em></p>
-  <p class="centerPrettyText"><em> - George Orwell </em></p>
-
-
-  <div class="verticalSpacing"></div>
+    
+  
   <footer id="footerAccent">
     <div class="shrinkPhoto"><img src="img/otter.png" alt="Otter" width="300" height="100"></div>
     <div class="verticalSpacing"></div>
