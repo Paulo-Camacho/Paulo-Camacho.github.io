@@ -1,34 +1,262 @@
 <!DOCTYPE html> <!-- this says that this is an html document -->
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title> THIS IS THE LABEL ON THE TAB </title>
-  </head>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title> Orange Otters </title>
+  <!-- This is a custom google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background-color: white;
+      font-family: 'JetBrains Mono', monospace;
+    }
 
-  <body>
-    <header>
-      <h1> CONTACT </h1>
-    </header>
-
-    <hr>
-
-    <div>
-      <nav><a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      </nav>
-
-    <hr>
-
-  <footer>
-
-    <p>CST336 Internet programming. 2025 C Camacho, Ayala, Camberos, Bernal-Morales</p>
-    <p>Disclaimer: The information in this webpage is fictitious.</p>
-    <p>It is used for academic purposes only.</p>
-    <img src="img/otter.png" align="middle"width="300" height="100">
-
+    #accent1 {
+      margin: 0;
+      text-align: center;
+      background-color: #444444;
+      width: 100%;
+    }
+    #accent2 {
+      background-color: white;
+      text-align: center;
+      padding: 2%;
+    }
+    .boxAccent:hover {
+      background: #4647e1;
+    }
+    .boxAccent {
+      background: #444444;
+      padding: 0.5% 0.5%;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      margin: 0 auto;
+      margin-right: 1%;
+      margin-left: 1%;
+      transition: background-color 0.3s ease;
+    }
+    #row {
+      display: flex;
+      justify-content: center;
+      /* Content will wrap it the next line if window gets too small */
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    #footerAccent {
+      background-color: #444444;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      margin: 0;
+      width: 100%;
+      font-size: small;
+    }
+    .photo {
+      width: 100%;
+      height: 300px;
+      border: 5px solid rgb(255, 255, 255);
+      /* This will pink in the photo to the block size. */
+      border-radius: 5%;
+      object-fit: cover;
+    }
+    .shrinkPhoto {
+      width: 20%;
+      margin: 0 auto;
+    }
+    .centerPrettyText {
+      text-align: center;
+      color: black;
+    }
+    .tableAccent {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: white;
+      border-collapse: collapse;
+      border: 2px solid #000;
+    }
+    .tableAccent th,
+    .tableAccent td {
+      border: 1px solid #000;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    .tableAccent th {
+      background-color: #f8f9fa;
+      font-weight: bold;
+      border-bottom: 2px solid #000;
+    }
+    /* This alternates the row coloring */
+    .tableAccent tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    .verticalSpacing {
+      margin: 2rem 0;
+    }
+    
+    .contactContainer {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .contactForm {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .form-group label {
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #333;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+      padding: 0.75rem;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+    
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #4647e1;
+    }
+    
+    .required {
+      color: red;
+    }
+    
+    .submit-btn {
+      background-color: #444444;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 1rem;
+    }
+    
+    .submit-btn:hover {
+      background-color: #4647e1;
+    }
+    
+    .form-title {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+      font-size: 1.5rem;
+    }
+    
+    /* Style for form messages */
+    .form-message {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 5px;
+      text-align: center;
+      display: none;
+    }
+    
+    .success-message {
+      background-color: #d4edda;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+    }
+    
+    .error-message {
+      background-color: #f8d7da;
+      border: 1px solid #f5c6cb;
+      color: #721c24;
+    }
+    
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="color:white" class="centerPrettyText" id="accent1"> Contact </h1>
+  </header>
+  <!-- navigation -->
+  <div id="accent2">
+    <nav>
+      <a class="boxAccent" href="index.html"> Home </a>
+      <a class="boxAccent" href="about.html"> About </a>
+      <a class="boxAccent" href="contact.html"> Contact </a>
+    </nav>
+  </div>
+  <div class="verticalSpacing"></div>
+ 
+  <main>
+    <div class="contactContainer">
+      <h2 class="form-title">Contact Me</h2>
+      
+      <div id="form-message" class="form-message"></div>
+      
+      <form class="contactForm" id="contactForm">
+        <div class="form-group">
+          <label for="name">Name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" required placeholder="Your name">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="example@csumb.edu">
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What is this about?">
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message <span class="required">*</span></label>
+          <textarea id="message" name="message" rows="5" required placeholder="Please enter message here"></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </div>
+  </main>
+  
+  <div class="verticalSpacing"></div>
+  <div class="verticalSpacing"></div>
+    
+  <footer id="footerAccent">
+    <div class="shrinkPhoto"><img src="img/otter.png" alt="Otter" width="300" height="100"></div>
+    <div class="verticalSpacing"></div>
+    <p style="color:rgb(196, 194, 194)" class="centerPrettyText">CST336 Internet programming. 2025 Paulo Camacho, Ayala,
+      Camberos, Bernal-Morales</p>
+    <p style="color:rgb(196, 194, 194)" class="centerPrettyText">Disclaimer: The information in this webpage is
+      fictitious.</p>
+    <p style="color:rgb(196, 194, 194)" class="centerPrettyText">It is used for academic purposes only.</p>
   </footer>
 
-  </body>
-
+</body>
 </html>
