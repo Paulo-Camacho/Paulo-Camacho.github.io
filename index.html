@@ -1,24 +1,33 @@
 <!DOCTYPE html> <!-- this says that this is an html document -->
-<html>
-
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title> THIS IS THE LABEL ON THE TAB </title>
+  <title> Orange Otters </title>
+
+  <!-- This is a custom google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
   <style>
- * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    
-    html, body {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
+
+    html,
     body {
-    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
-    background-color: white;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+    }
+
+    body {
+      /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
+      background-color: white;
+      font-family: 'JetBrains Mono', monospace;
     }
 
     #accent1 {
@@ -34,7 +43,7 @@
       padding: 2%;
     }
 
-    .boxAccent:hover{
+    .boxAccent:hover {
       color: #4647e1;
     }
 
@@ -47,9 +56,7 @@
       margin: 0 auto;
       margin-right: 1%;
       margin-left: 1%;
-      text-align: center;
     }
-
 
     #row {
       display: flex;
@@ -95,7 +102,7 @@
 
 <body>
   <header>
-    <h1 style="color:white" class="centerPrettyText" id="accent1"> HEY </h1>
+    <h1 style="color:white" class="centerPrettyText" id="accent1"> Orange Otters </h1>
   </header>
 
   <!-- navigation -->
@@ -107,7 +114,9 @@
     </nav>
   </div>
 
-    <div class="verticalSpacing"></div>
+
+  <div class="verticalSpacing"></div>
+
 
   <div id="row">
     <figure class="shrinkPhoto">
@@ -120,12 +129,13 @@
     </figure>
     <figure class="shrinkPhoto">
       <img class="photo" src="img/Yadhira.jpeg" width="100">
-      <figcaption class="centerPrettyText"> Athian </figcaption>
+      <figcaption class="centerPrettyText"> Yadhira </figcaption>
     </figure>
   </div>
 
 
   <div class="verticalSpacing"></div>
+
 
   <p class="centerPrettyText">Hello! Thank you for visiting our website. We are the Orange Otters currently enrolled in
     CST 336 at CSUMB. Feel
@@ -138,13 +148,16 @@
   <p class="centerPrettyText"><em> "Who controls the past controls the future" </em></p>
   <p class="centerPrettyText"><em> - George Orwell </em></p>
 
-<div class="verticalSpacing"></div>
+
+  <div class="verticalSpacing"></div>
   <footer id="footerAccent">
-    <div class="shrinkPhoto"><img src="img/otter.png" align="middle" width="300" height="100"></div>
+    <div class="shrinkPhoto"><img src="img/otter.png" alt="Otter" width="300" height="100"></div>
     <div class="verticalSpacing"></div>
-    <p style="color:white" class="centerPrettyText">CST336 Internet programming. 2025 C Camacho, Ayala, Camberos, Bernal-Morales</p>
-    <p style="color:white" class="centerPrettyText">Disclaimer: The information in this webpage is fictitious.</p>
-    <p style="color:white" class="centerPrettyText">It is used for academic purposes only.</p>
+    <p style="color:rgb(196, 194, 194)" class="centerPrettyText">CST336 Internet programming. 2025 Paulo Camacho, Ayala,
+      Camberos, Bernal-Morales</p>
+    <p style="color:rgb(196, 194, 194)" class="centerPrettyText">Disclaimer: The information in this webpage is
+      fictitious.</p>
+    <p style="color:rgb(196, 194, 194)" class="centerPrettyText">It is used for academic purposes only.</p>
   </footer>
 
 </body>
