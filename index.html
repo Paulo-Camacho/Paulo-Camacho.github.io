@@ -1,167 +1,50 @@
-<!DOCTYPE html> <!-- this says that this is an html document -->
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title> Orange Otters </title>
-
-  <!-- This is a custom google font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      background-color: white;
-      font-family: 'JetBrains Mono', monospace;
-    }
-
-    #accent1 {
-      margin: 0;
-      text-align: center;
-      background-color: #444444;
-      width: 100%;
-    }
-
-    #accent2 {
-      background-color: white;
-      text-align: center;
-      padding: 2%;
-    }
-
-    .boxAccent:hover {
-      background: #4647e1;
-    }
-
-    .boxAccent {
-      background: #444444;
-      padding: 0.5% 0.5%;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      margin: 0 auto;
-      margin-right: 1%;
-      margin-left: 1%;
-      transition: background-color 0.3s ease;
-    }
-
-    #row {
-      display: flex;
-      justify-content: center;
-      /* Content will wrap it the next line if window gets too small */
-      flex-wrap: wrap;
-      text-align: center;
-    }
-
-    #footerAccent {
-      background-color: #444444;
-      padding-top: 2%;
-      padding-bottom: 2%;
-      margin: 0;
-      width: 100%;
-      font-size: small;
-    }
-
-    .photo {
-      width: 100%;
-      height: 300px;
-      border: 5px solid rgb(255, 255, 255);
-      /* This will pink in the photo to the block size. */
-      border-radius: 5%;
-      object-fit: cover;
-    }
-
-    .shrinkPhoto {
-      width: 20%;
-      margin: 0 auto;
-
-    }
-
-    .centerPrettyText {
-      text-align: center;
-      color: black;
-    }
-
-    .verticalSpacing {
-      margin: 2rem 0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neovim</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <h1 style="color:white" class="centerPrettyText" id="accent1"> Orange Otters </h1>
-  </header>
-
-  <!-- navigation -->
-  <div id="accent2">
-    <nav>
-      <a class="boxAccent" href="index.html"> Home </a>
-      <a class="boxAccent" href="about.html"> About </a>
-      <a class="boxAccent" href="contact.html"> Contact </a>
-    </nav>
-  </div>
-
-
-  <div class="verticalSpacing"></div>
-
-
-  <div id="row">
-    <figure class="shrinkPhoto">
-      <img class="photo" src="img/me.jpg" width="100">
-      <figcaption class="centerPrettyText"> Paulo Camacho </figcaption>
-    </figure>
-    <figure class="shrinkPhoto">
-      <img class="photo" src="img/Wendy.jpg" width="100">
-      <figcaption class="centerPrettyText"> Wendy </figcaption>
-    </figure>
-    <figure class="shrinkPhoto">
-      <img class="photo" src="img/Yadhira.jpeg" width="100">
-      <figcaption class="centerPrettyText"> Yadhira </figcaption>
-    </figure>
-    <figure class="shrinkPhoto">
-      <img class="photo" src="img/Athian.jpg" width="100">
-      <figcaption class="centerPrettyText"> Athian </figcaption>
-    </figure>
-  </div>
-
-
-  <div class="verticalSpacing"></div>
-
-
-  <p class="centerPrettyText">Hello! Thank you for visiting our website. We are the Orange Otters currently enrolled in
-    CST 336 at CSUMB. Feel
-    free to contact us! </p>
-
-
-  <div class="verticalSpacing"></div>
-
-
-  <p class="centerPrettyText"><em> "Who controls the past controls the future" </em></p>
-  <p class="centerPrettyText"><em> - George Orwell </em></p>
-
-
-  <div class="verticalSpacing"></div>
-  <footer id="footerAccent">
-    <div class="shrinkPhoto"><img src="img/otter.png" alt="Otter" width="300" height="100"></div>
-    <div class="verticalSpacing"></div>
-    <p style="color:rgb(196, 194, 194)" class="centerPrettyText">CST336 Internet programming. 2025 Paulo Camacho, Ayala,
-      Camberos, Bernal-Morales</p>
-    <p style="color:rgb(196, 194, 194)" class="centerPrettyText">Disclaimer: The information in this webpage is
-      fictitious.</p>
-    <p style="color:rgb(196, 194, 194)" class="centerPrettyText">It is used for academic purposes only.</p>
-  </footer>
-
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">NEOVIM</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="history.html">History</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="current.html">Current</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="content-wrapper">
+                <h1> Neovim </h1>
+                <p class="subtitle">
+                    <a class="subtitle" href="https://github.com/neovim/neovim/milestone/5?closed=1">The terminal based
+                        mode text editor!</a>
+                </p>
+                <div><!-- meat and potatoes -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <img id="shrink" src="imgs/neovim.png" alt="Neovim logo">
+        </div>
+    </footer>
 </body>
 
 </html>
