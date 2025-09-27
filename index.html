@@ -1,34 +1,68 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <title> Guess a Number </title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
-    </head>
-<body>
-    <header>
-        <h1> Guess the Number! </h1>
-        <h2> Guess a number between 1 and 99 in seven attempts! </h2>
-    </header>
-    <br>
-    <div id="main">
-        Enter a guess:
-        <input type="text" id="playerGuess" size="5">
-        <button id="guessBtn">Guess</button> <br>
-        <button id="resetBtn">Reset</button>
-        <div id="feedBack"></div>
-        <div id="attemptsLeft">Attempts left: 7</div>
-        <div>Previous Guesses: 
-            <span id="guesses"></span>
-        </div>
-    </div>
-    
-    <div id="stats">
-        <h3> Game Stats </h3>
-        <div> Wins: <span id="wins">0</span></div>
-        <div> Losses: <span id="losses">0</span></div>
-    </div>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Lab 3: Quiz </title>
+    <script src="https://unpkg.com/underscore@1.13.7/underscore-umd-min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1> Animal Quiz </h1>
+
+    <div>
+        Quiz Attempts: <span id="attemptCount">0</span>
+    </div>
+    <div id="finalScore"></div>
+    <div id="congratsMessage"></div>
+
+    <div id="questionOne">1. What is the largest mammal? </div><br>
+    <div id="result1"></div>
+    <label><input type="radio" name="q1" value="Elephant"> Elephant </label>
+    <label><input type="radio" name="q1" value="Giraffe"> Giraffe </label>
+    <label><input type="radio" name="q1" value="Whale"> Whale </label>
+    <br>
+    <hr>
+    <div id="questionTwo"> 2. What species is a frog </div><br>
+    <div id="result2"></div>
+    <label><input type="checkbox" id="q2a" value="Reptile"> Reptile </label>
+    <label><input type="checkbox" id="q2b" value="Amphibian"> Amphibian </label>
+    <label><input type="checkbox" id="q2c" value="Both"> Both </label>
+    <br>
+    <hr>
+    <div id="questionThree"> 3. What do sea turtles eat? </div><br>
+    <div id="result3"></div>
+    <div id="random"></div>
+    <br>
+    <hr>
+    <div id="questionFour"> 4. How many feet do dogs have? </div>
+    <div id="result4"></div>
+    <label>
+        <select>
+            <option id="q4a" value="0"> 0 </option>
+            <option id="q4b" value="2"> 2 </option>
+            <option id="q4c" value="4"> 4 </option>
+        </select>
+    </label>
+    <br>
+    <hr>
+    <div id="questionFive"> 5. What animal has feathers? </div>
+    <div id="result5"></div>
+    <label>
+        My favorite animal is:
+        <select id="bgColor">
+            <option value="Cat"> Cat </option>
+            <option value="Bird"> Bird </option>
+            <option value="Mole"> Mole </option>
+        </select>
+        <button id="bgColorBtn"> I'm feeling lucky </button>
+    </label>
+    <button id="quizBtn"> Submit </button>
+    <br>
+    <hr>
     <script src="js/script.js"></script>
 </body>
+
 </html>
