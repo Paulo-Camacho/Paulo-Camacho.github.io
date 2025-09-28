@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Guess a Number </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1> Lucky Slots Casino </h1>
+    </header>
+
+    <div id="main">
+        <div class="payout-info">
+            Payouts:
+            <br>
+            3x7️⃣ = 15x your bet
+            <br>
+            3x🍒 = 10x your bet
+            <br>
+            3x🍓 = 8x your bet
+        </div>
+
+    <div id="stats">
+        <h3> Game Statistics </h3>
+        <div class="stat-item">Balance: $<span id="balance" class="money">100</span></div>
+        <div class="stat-item">Total Wins: <span id="wins">0</span></div>
+        <div class="stat-item">Total Losses: <span id="losses">0</span></div>
+        <div class="stat-item">Games Played: <span id="gamesPlayed">0</span></div>
+        <div class="stat-item">Biggest Win: $<span id="biggestWin" class="money">0</span></div>
+    </div>
+
+    <br>
+
+        <div>
+            <label for="betInput">Enter amount to gamble:</label><br>
+            <input type="number" id="betInput" min="1" max="100" value="10" placeholder="Enter bet amount">
+        </div>
+
+        <div id="currentBet"> Current Bet: $<span id="betAmount"> 10 </span></div>
+
+        <div id="slotMachine">
+            <div class="slot" id="slot1"></div>
+            <div class="slot" id="slot2"></div>
+            <div class="slot" id="slot3"></div>
+        </div>
+
+        <button id="spinBtn"> Spin the Slots! </button>
+        <button id="resetBtn"> Reset Game </button>
+
+        <div id="feedback"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
