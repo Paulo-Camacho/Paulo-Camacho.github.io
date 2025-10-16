@@ -33,7 +33,9 @@ async function displayCounty() {
 
 // Showing the US states
 async function displayStates() {
-    let url = "https://csumb.space/api/allStatesAPI.php";
+
+    let url = "https://csumb.space/api/videoLikes.php?videoId/"
+    // let url = "https://csumb.space/api/allStatesAPI.php";
     try {
         let response = await fetch(url);
         let data = await response.json();
