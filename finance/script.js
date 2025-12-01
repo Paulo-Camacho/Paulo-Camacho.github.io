@@ -10,6 +10,3 @@ document.getElementById("fvForm").addEventListener("submit", function (e) {
     document.getElementById("fvResult").textContent =
         "Future Value: $" + fv.toFixed(2);
 });
-
-console.log("hello world")
-alert("Hello")
