@@ -42,11 +42,26 @@
         <label>Present Value (PV)</label>
         <input type="number" id="pv" required>
 
-        <label>Interest Rate (per period, decimal)</label>
+        <label>Interest Rate (per period, %) </label>
         <input type="number" step="0.001" id="rate" required>
 
         <label>Number of Periods (n)</label>
         <input type="number" id="n" required>
+
+        <label>Periodic Deposit (PMT)</label>
+        <input type="number" id="pmt" value="0">
+
+        <label>Deposit made at:</label>
+        <div>
+            <label>
+                <input type="radio" name="due" value="beginning" checked>
+                Beginning of period
+            </label>
+            <label>
+                <input type="radio" name="due" value="end">
+                End of period
+            </label>
+        </div>
 
         <button type="submit">Calculate Future Value</button>
     </form>
@@ -67,7 +82,7 @@
     </main>
     <footer>
         <div class="container">
-            <!-- <img id="shrink" src="imgs/neovim.png" alt="Neovim logo"> -->
+     <img id="shrink" src="imgs/formula-of-future-value-fv-1611228100.png" height="50%" width="150%" alt="Neovim logo"> 
         </div>
     </footer>
 </body>
