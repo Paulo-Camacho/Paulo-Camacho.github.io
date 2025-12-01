@@ -10,3 +10,4 @@ document.getElementById("fvForm").addEventListener("submit", function (e) {
     document.getElementById("fvResult").textContent =
         "Future Value: $" + fv.toFixed(2);
 });
+
