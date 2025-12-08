@@ -3,9 +3,10 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Neovim</title>
+        <title>Present Value</title>
 
         <link rel="stylesheet" href="style.css" type="text/css" />
+
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -18,10 +19,7 @@
     </head>
 
     <body>
-        <!-- PARTIAL HEADER -->
-        <div id="header"></div>
-
-        <div id="header"></div>
+        <!-- HARD-CODED HEADER -->
         <header>
             <div class="container">
                 <div class="header-content">
@@ -33,14 +31,18 @@
                             <li>
                                 <a
                                     href="https://en.wikipedia.org/wiki/Future_value"
-                                    >Wikipedia_Future_Value</a
+                                    target="_blank"
                                 >
+                                    Wikipedia_Future_Value
+                                </a>
                             </li>
                             <li>
                                 <a
                                     href="https://en.wikipedia.org/wiki/Present_value"
-                                    >Wikipedia_Present_Value</a
+                                    target="_blank"
                                 >
+                                    Wikipedia_Present_Value
+                                </a>
                             </li>
                         </ul>
                     </nav>
@@ -88,14 +90,5 @@
                 <img id="shrink" src="imgs/history.png" alt="Textbook" />
             </div>
         </footer>
-
-        <!-- LOAD HEADER PARTIAL -->
-        <script>
-            fetch("header.html")
-                .then((res) => res.text())
-                .then((html) => {
-                    document.getElementById("header").innerHTML = html;
-                });
-        </script>
     </body>
 </html>
