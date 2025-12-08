@@ -2,7 +2,7 @@ document.getElementById("pvForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const fv = Number(document.getElementById("pv_fv").value);
-  const n  = Number(document.getElementById("pv_n").value);
+  const n = Number(document.getElementById("pv_n").value);
   const ratePct = Number(document.getElementById("pv_rate").value);
 
   const r = ratePct / 100; // convert percent to decimal
@@ -12,5 +12,3 @@ document.getElementById("pvForm").addEventListener("submit", function (e) {
   document.getElementById("pvResult").textContent =
     "Present Value: $" + pv.toFixed(2);
 });
-
-alert("Loaded pv.js successfully");

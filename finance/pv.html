@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Finance Information</title>
+        <title>Neovim</title>
 
         <link rel="stylesheet" href="style.css" type="text/css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,11 +13,14 @@
             rel="stylesheet"
         />
 
+        <script src="pv.js" defer></script>
         <script src="script.js" defer></script>
     </head>
 
     <body>
-        <!-- PLACEHOLDER FOR HEADER PARTIAL -->
+        <!-- PARTIAL HEADER -->
+        <div id="header"></div>
+
         <div id="header"></div>
         <header>
             <div class="container">
@@ -46,62 +49,53 @@
         </header>
 
         <main>
-            <div class="fv-wrapper">
-                <h2>Future Value Calculator</h2>
+            <div class="container">
+                <div class="content-wrapper">
+                    <div class="pv-wrapper">
+                        <h2>Present Value Calculator</h2>
 
-                <form id="fvForm">
-                    <label>Present Value (PV)</label>
-                    <input type="number" id="pv" required />
+                        <form id="pvForm">
+                            <label>Future Value (FV)</label>
+                            <input type="number" id="pv_fv" required />
 
-                    <label>Interest Rate (per period, %)</label>
-                    <input type="number" step="0.001" id="rate" required />
-
-                    <label>Number of Periods (n)</label>
-                    <input type="number" id="n" required />
-
-                    <label>Periodic Deposit (PMT)</label>
-                    <input type="number" id="pmt" value="0" />
-
-                    <label>Deposit made at:</label>
-                    <div>
-                        <label>
+                            <label>Interest Rate (per period, %)</label>
                             <input
-                                type="radio"
-                                name="due"
-                                value="beginning"
-                                checked
+                                type="number"
+                                id="pv_rate"
+                                step="0.001"
+                                required
                             />
-                            Beginning of period
-                        </label>
-                        <label>
-                            <input type="radio" name="due" value="end" />
-                            End of period
-                        </label>
+
+                            <label>Number of Periods (n)</label>
+                            <input type="number" id="pv_n" required />
+
+                            <button type="submit">
+                                Calculate Present Value
+                            </button>
+                        </form>
+
+                        <div class="result-box">
+                            <h4>Result:</h4>
+                            <p id="pvResult"></p>
+                        </div>
                     </div>
-
-                    <button type="submit">Calculate Future Value</button>
-                </form>
-
-                <div class="result-box">
-                    <h4>Result:</h4>
-                    <p id="fvResult"></p>
                 </div>
             </div>
-
-            <img
-                src="imgs/ok.webp"
-                height="35%"
-                width="35%"
-                alt="Future value"
-            />
         </main>
 
         <footer>
-            <div class="container"></div>
+            <div class="container">
+                <img id="shrink" src="imgs/history.png" alt="Textbook" />
+            </div>
         </footer>
 
+        <!-- LOAD HEADER PARTIAL -->
         <script>
-            console.log("hello world");
+            fetch("header.html")
+                .then((res) => res.text())
+                .then((html) => {
+                    document.getElementById("header").innerHTML = html;
+                });
         </script>
     </body>
 </html>

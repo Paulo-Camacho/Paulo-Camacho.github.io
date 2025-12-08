@@ -1,11 +1,12 @@
 document.getElementById("fvForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const pv   = Number(document.getElementById("pv").value);
+  const pv = Number(document.getElementById("pv").value);
   const ratePct = Number(document.getElementById("rate").value); // shown as %
-  const n    = Number(document.getElementById("n").value);
-  const pmt  = Number(document.getElementById("pmt").value || 0); // $ per period
-  const due  = document.querySelector('input[name="due"]:checked')?.value === 'beginning';
+  const n = Number(document.getElementById("n").value);
+  const pmt = Number(document.getElementById("pmt").value || 0); // $ per period
+  const due =
+    document.querySelector('input[name="due"]:checked')?.value === "beginning";
 
   const r = ratePct / 100; // convert percent to decimal
 
@@ -16,10 +17,17 @@ document.getElementById("fvForm").addEventListener("submit", function (e) {
     fvPmt = pmt * n;
   } else {
     const annuityFactor = (Math.pow(1 + r, n) - 1) / r;
-    fvPmt = pmt * annuityFactor * (due ? (1 + r) : 1); // annuity-due if beginning
+    fvPmt = pmt * annuityFactor * (due ? 1 + r : 1); // annuity-due if beginning
   }
 
   const fv = fvLump + fvPmt;
 
-  document.getElementById("fvResult").textContent = "Future Value: $" + fv.toFixed(2);
+  document.getElementById("fvResult").textContent =
+    "Future Value: $" + fv.toFixed(2);
 });
+
+fetch("/header.html")
+  .then((res) => res.text())
+  .then((data) => {
+    document.getElementById("header").innerHTML = data;
+  });
